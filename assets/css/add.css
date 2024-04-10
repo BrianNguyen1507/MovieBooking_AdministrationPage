@@ -1,0 +1,87 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.container {
+    padding: 20px 0;
+}
+
+.services {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+
+.form label {
+    font-weight: bold;
+}
+
+.form input[type="text"],
+.form input[type="number"],
+.form input[type="date"],
+.form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.form button[type="button"] {
+    padding: 10px 20px;
+    background-color: #ff4848;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.form button[type="button"]:hover {
+    background-color: #ff4848;
+}
+
+
+
+.sub-footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.sub-footer p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .services {
+        max-width: 90%;
+    }
+}
+
+
