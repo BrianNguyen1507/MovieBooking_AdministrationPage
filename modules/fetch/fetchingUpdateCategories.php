@@ -1,5 +1,5 @@
 <?php
-$url = "http://192.168.2.10:8083/cinema/categories";
+$url = "http://192.168.2.9:8083/cinema/categories";
 $data = file_get_contents($url);
 
 if ($data !== false) {

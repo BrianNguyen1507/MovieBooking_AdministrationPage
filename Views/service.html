@@ -18,6 +18,10 @@
 
     <link rel="stylesheet" href="../assets/css/theme.css" />
   </head>
+  <script src="../utils/checkin.js"></script>
+  <script src="../utils/logout.js"></script>
+  <script src="../utils/pop.js"></script>
+  <script src="../utils/navbar.js"></script>
   <body>
     <!-- Back to top button -->
     <div class="back-to-top"></div>
@@ -43,27 +47,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
 
-          <div class="navbar-collapse collapsed" id="navbarContent">
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="about.html">About</a>
-              </li>
-              <li class="nav-item active">
-                <a class="nav-link" href="service.html">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="blog.html">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="btn btn-primary ml-lg-2" href="#">Free Analytics</a>
-              </li>
-            </ul>
+          <div class="navbar-collapse collapse" id="navbarContent">
+            <ul class="navbar-nav ml-auto" id="navbar"></ul>
           </div>
         </div>
       </nav>

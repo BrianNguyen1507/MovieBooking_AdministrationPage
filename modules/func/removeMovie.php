@@ -19,7 +19,7 @@ function RemoveMovie($payload)
     $id = $payloadData['id'];
     $token = $payloadData['token'];
 
-    $api_url = 'http://192.168.2.10:8083/cinema/deleteFilm?id=' . $id;
+    $api_url = 'http://192.168.2.9:8083/cinema/deleteFilm?id=' . $id;
        $options = array(
         'http' => array(
             'method' => 'GET',

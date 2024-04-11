@@ -18,7 +18,7 @@ function updateMovieFromPayload($payload)
 
 
 
-    $api_url = 'http://192.168.2.10:8083/cinema/updateFilm';
+    $api_url = 'http://192.168.2.9:8083/cinema/updateFilm';
 
     $jsonData = $payloadData['jsonData'];
     $token = $payloadData['token'];

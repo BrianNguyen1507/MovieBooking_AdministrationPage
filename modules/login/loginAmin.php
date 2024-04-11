@@ -19,7 +19,7 @@ function login($username, $password)
 
     $context = stream_context_create($options);
 
-    $response = file_get_contents('http://192.168.2.10:8083/cinema/login', false, $context);
+    $response = file_get_contents('http://192.168.2.9:8083/cinema/login', false, $context);
 
     return $response;
 
