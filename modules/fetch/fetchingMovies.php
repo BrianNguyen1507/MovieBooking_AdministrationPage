@@ -1,6 +1,6 @@
 <?php
 try {
-  $url = 'http://192.168.2.10:8083/cinema/showAllFilm';
+  $url = 'http://192.168.2.9:8083/cinema/showAllFilm';
   $movieCount = 0;
   $data = file_get_contents($url);
   if ($data !== false) {

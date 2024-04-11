@@ -2,12 +2,12 @@
 
 if (isset($movieId)) {
     $id = $movieId;
-    $url = "http://192.168.2.10:8083/cinema/detailFilm?id=$id";
+    $url = "http://192.168.2.9:8083/cinema/detailFilm?id=$id";
     $data = file_get_contents($url);
     if ($data !== false) {
         $result = json_decode($data, true);
     }
-    $selectedCategories = array_column($result['categories'], 'name'); // Danh sách tên danh mục đã chọn
+    $selectedCategories = array_column($result['categories'], 'name');
     $imageData = base64_decode($result['posters']);
     $imageResource = imagecreatefromstring($imageData);
     if ($imageResource !== false) {
