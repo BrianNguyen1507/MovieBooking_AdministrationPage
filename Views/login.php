@@ -90,8 +90,7 @@
               document.getElementById("status").innerText = "Login successful";
               document.getElementById("status").style.color = "green";
             } else {
-              document.getElementById("status").innerText = "Login failed";
-              document.getElementById("status").style.color = "red";
+
 
             }
             if (response.authenticated && response.token && response.role == "ADMIN") {
@@ -101,10 +100,19 @@
               sessionStorage.setItem("username", username);
               window.location.href = "../index.php";
 
+            } else if (rsponse.authenticated && response.token && response.role == "STAFF") {
+              sessionStoraege.setItem("token", response.token);
+              sessionStorage.setItem("authenticated", response.authenticated);
+              sessionStorage.setItem("role", response.role);
+              sessionStorage.setItem("username", username);
+              window.location.href = "../staff-site/Views/MenuPage.php";
+            } else {
+              document.getElementById("status").innerText = "Login failed";
+              document.getElementById("status").style.color = "red";
             }
           } else {
-            console.error("Error:", xhr.statusText);
-            document.getElementById("status").innerText = "Sever Error";
+            document.getElementById("status").innerText = "Login failed";
+            document.getElementById("status").style.color = "red";
           }
         }
       };
