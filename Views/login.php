@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-
 <head>
   <meta charset="utf-8">
   <title>Login Site</title>
@@ -82,41 +81,29 @@
         if (xhr.readyState === 4) {
           if (xhr.status === 200) {
             var response = JSON.parse(xhr.responseText);
-            if (response.authenticated && response.token && response.role === "ADMIN") {
-              sessionStorage.setItem("token", response.token);
-              sessionStorage.setItem("authenticated", response.token);
-              sessionStorage.setItem("role", response.token);
-              window.location.href = "index.php";
-              document.getElementById("status").innerText = "Login successful";
-              document.getElementById("status").style.color = "green";
-            } else {
-
-
-            }
-            if (response.authenticated && response.token && response.role == "ADMIN") {
+            if (response.authenticated && response.token) {
               sessionStorage.setItem("token", response.token);
               sessionStorage.setItem("authenticated", response.authenticated);
               sessionStorage.setItem("role", response.role);
               sessionStorage.setItem("username", username);
-              window.location.href = "../index.php";
-
-            } else if (rsponse.authenticated && response.token && response.role == "STAFF") {
-              sessionStoraege.setItem("token", response.token);
-              sessionStorage.setItem("authenticated", response.authenticated);
-              sessionStorage.setItem("role", response.role);
-              sessionStorage.setItem("username", username);
-              window.location.href = "../staff-site/Views/MenuPage.php";
+              if (response.role === "ADMIN") {
+                window.location.href = "index.php";
+              } else if (response.role === "EMPLOYEE") {
+                window.location.href = "MenuPage.php";
+              } else {
+                document.getElementById("status").innerText = "Unknown role";
+                document.getElementById("status").style.color = "red";
+              }
             } else {
               document.getElementById("status").innerText = "Login failed";
               document.getElementById("status").style.color = "red";
             }
           } else {
-            document.getElementById("status").innerText = "Login failed";
+            document.getElementById("status").innerText = "Server error";
             document.getElementById("status").style.color = "red";
           }
         }
       };
-
       var jsonData = JSON.stringify(loginData);
       console.log(jsonData);
       xhr.send(jsonData);
