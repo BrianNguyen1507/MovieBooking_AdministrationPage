@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="assets/css/theme.css">
 
 </head>
-<script src="utils/checkin.js"></script>
+<script src="utils/checkadmin.js"></script>
 <script src="utils/logout.js"></script>
 <script src="utils/pop.js"></script>
 
